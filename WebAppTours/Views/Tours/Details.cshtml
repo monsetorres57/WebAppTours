@@ -1,0 +1,50 @@
+﻿@model TourData.Tour
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Tour</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DepartureDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DepartureDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ReturnDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ReturnDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Route)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Route)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Tour }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
